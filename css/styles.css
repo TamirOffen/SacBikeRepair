@@ -12,3 +12,56 @@
 .navbar .nav-item.active {
   border-left: rgba(63, 62, 62, 0.85) 3px solid;
 }
+
+.carousel-item {
+  height: 450px;
+}
+
+.carousel-image-1 {
+  background: url(../img/repair2.jpg);
+  background-size: cover;
+}
+
+.carousel-image-2 {
+  background: url(../img/repair1.jpg);
+  background-size: cover;
+}
+
+.carousel-image-3 {
+  background: url(../img/repair3.jpg);
+  background-size: cover;
+}
+
+.dark-overlay {
+  background: rgba(0, 0, 0, 0.7);
+}
+
+#page-header {
+  height: 250px;
+  background: url("../img/services-header.jpg");
+  background-position: 0 -560px;
+  background-attachment: fixed;
+  color: #fff;
+  border-bottom: 1px #eee solid;
+  padding-top: 50px;
+}
+
+.lato-font {
+  font-family: "Lato", sans-serif;
+}
+
+.list-group-larger-text {
+  font-size: 16px;
+  font-family: "Lato", sans-serif;
+}
+
+hr.gradient-on-ends {
+  border: 0;
+  height: 1px;
+  background-image: linear-gradient(
+    to right,
+    rgba(0, 0, 0, 0),
+    rgba(0, 0, 0, 0.75),
+    rgba(0, 0, 0, 0)
+  );
+}
