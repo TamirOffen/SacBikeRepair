@@ -123,7 +123,7 @@
               </ul>
             </div>
             <div class="card-footer ">
-              <a href="# " class="btn btn-success d-block ">Get It</a>
+              <button class="btn btn-success btn-block" data-toggle="modal" data-target="#basicService">Get It</button>
             </div>
           </div>
         </div>
@@ -156,7 +156,7 @@
               </ul>
             </div>
             <div class="card-footer ">
-              <a href="# " class="btn btn-success d-block ">Get It</a>
+              <button class="btn btn-success btn-block" data-toggle="modal" data-target="#advancedService">Get It</button>
             </div>
           </div>
         </div>
@@ -175,7 +175,9 @@
                 </p>
                 <div class="m-2 "></div>
                 <p></p>
-                <a href="# " class="btn btn-outline-primary btn-lg d-inline ">Request Form</a>
+                <button class="btn btn-outline-primary btn-lg d-inline" data-toggle="modal" data-target="#customService">Request
+                  Form
+                </button>
               </div>
               <p class="blockquote-footer text-right mt-2">We will get back to you as soon as possible with a price, or further
                 questions.
@@ -193,7 +195,7 @@
     <div class="modal-dialog">
       <div class="modal-content">
         <div class="modal-header">
-          <h5 class="modal-title">Flat Tire Service</h5>
+          <h4 class="modal-title">Flat Tire Service</h4>
           <button class="close" data-dismiss="modal"><span>&times;</span></button>
         </div>
         <div class="modal-body">
@@ -250,6 +252,165 @@
     </div>
   </div>
 
+  <!-- BASIC SERVICE MODAL -->
+  <div id="basicService" class="modal fade text-dark">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h4 class="modal-title">Basic Service (30$)</h4>
+          <button class="close" data-dismiss="modal"><span>&times;</span></button>
+        </div>
+        <div class="modal-body">
+          <form>
+            <div class="form-group">
+              <label for="name" class="d-inline">Name:</label>
+              <input type="text" class="form-control d-inline" placeholder="Jonah Harry">
+            </div>
+            <div class="form-group">
+              <label for="email">Email:</label>
+              <input type="email" class="form-control" placeholder="example123@gmail.com">
+            </div>
+            <div class="form-group">
+              <label for="number">Phone Number:</label>
+              <input type="tel" class="form-control" placeholder="123 456-7899">
+            </div>
+            <div class="form-group">
+              <label for="bike_type">What type of bike do you have?</label>
+              <select name="bike_type">
+                <option value="other">Other</option>
+                <option value="road">Road</option>
+                <option value="mountain">Mountain</option>
+                <option value="hybrid">Hybrid</option>
+                <option value="kids">Kids</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="avail_days" class="mb-0">Days Available:</label>
+              <p class="p-0 m-0"></p>
+              <input type="checkbox" name="" value=""> <div class="mr-3 d-inline">Sunday</div>
+              <input type="checkbox" name="" value="" class=""> Tuesday (after 5pm) <br>
+              <input type="checkbox" name="" value="" class=""> <div class="mr-3 d-inline">Thursday (after 5pm)</div>
+              <input type="checkbox" name="" value="" class=""> Saturday <br>
+              <input type="checkbox" name="" value="" class=""> None of these <br>
+            </div>
+            <div class="form-group">
+              <label for="notes">Notes?</label>
+              <textarea class="form-control"></textarea>
+            </div>
+          </form>
+          <div class="modal-footer">
+            <button class="btn btn-primary btn-block btn-lg"><i class="fas fa-share-square"></i> Submit</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ADVANCED SERVICE MODAL -->
+  <div id="advancedService" class="modal fade text-dark">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h4 class="modal-title">Advanced Service (65$)</h4>
+          <button class="close" data-dismiss="modal"><span>&times;</span></button>
+        </div>
+        <div class="modal-body">
+          <form>
+            <div class="form-group">
+              <label for="name" class="d-inline">Name:</label>
+              <input type="text" class="form-control d-inline" placeholder="Jonah Harry">
+            </div>
+            <div class="form-group">
+              <label for="email">Email:</label>
+              <input type="email" class="form-control" placeholder="example123@gmail.com">
+            </div>
+            <div class="form-group">
+              <label for="number">Phone Number:</label>
+              <input type="tel" class="form-control" placeholder="123 456-7899">
+            </div>
+            <div class="form-group">
+              <label for="bike_type">What type of bike do you have?</label>
+              <select name="bike_type">
+                <option value="other">Other</option>
+                <option value="road">Road</option>
+                <option value="mountain">Mountain</option>
+                <option value="hybrid">Hybrid</option>
+                <option value="kids">Kids</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="avail_days" class="mb-0">Days Available:</label>
+              <p class="p-0 m-0"></p>
+              <input type="checkbox" name="" value=""> <div class="mr-3 d-inline">Sunday</div>
+              <input type="checkbox" name="" value="" class=""> Tuesday (after 5pm) <br>
+              <input type="checkbox" name="" value="" class=""> <div class="mr-3 d-inline">Thursday (after 5pm)</div>
+              <input type="checkbox" name="" value="" class=""> Saturday <br>
+              <input type="checkbox" name="" value="" class=""> None of these <br>
+            </div>
+            <div class="form-group">
+              <label for="notes">Notes?</label>
+              <textarea class="form-control"></textarea>
+            </div>
+          </form>
+          <div class="modal-footer">
+            <button class="btn btn-primary btn-block btn-lg"><i class="fas fa-share-square"></i> Submit</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- CUSTOM SERVICE MODAL -->
+  <div id="customService" class="modal fade text-dark">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h4 class="modal-title">Custom Service</h4>
+          <button class="close" data-dismiss="modal"><span>&times;</span></button>
+        </div>
+        <div class="modal-body">
+          <form>
+            <div class="form-group">
+              <label for="name" class="d-inline">Name:</label>
+              <input type="text" class="form-control d-inline" placeholder="Jonah Harry">
+            </div>
+            <div class="form-group">
+              <label for="email">Email:</label>
+              <input type="email" class="form-control" placeholder="example123@gmail.com">
+            </div>
+            <div class="form-group">
+              <label for="bike_type">What type of bike do you have?</label>
+              <select name="bike_type">
+                <option value="other">Other</option>
+                <option value="road">Road</option>
+                <option value="mountain">Mountain</option>
+                <option value="hybrid">Hybrid</option>
+                <option value="kids">Kids</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="service-needed">Please explain the custom service that you need in detail:</label>
+              <textarea class="form-control" name="" id="" rows="10"></textarea>
+            </div>
+          </form>
+          <div class="modal-footer">
+            <button class="btn btn-primary btn-block btn-lg"><i class="fas fa-share-square"></i> Submit</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- FOOTER -->
+  <footer id="main-footer" class="text-center pt-3 bg-dark text-light">
+    <div class="container">
+      <div class="row">
+        <div class="col">
+          <p class="lead">Sac Bike Repair <span id="year"></span></p>
+        </div>
+      </div>
+    </div>
+  </footer>
 
 
   <script src="https://code.jquery.com/jquery-3.3.1.min.js " integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
