@@ -69,3 +69,32 @@ hr.gradient-on-ends {
 #main-footer {
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
+
+#faq .card {
+  border: #444;
+}
+
+#faq a {
+  color: #fff;
+  text-decoration: none;
+}
+
+#faq .card-body,
+#faq .card-header {
+  background: #333;
+}
+
+#contact-page-header {
+  height: 275px;
+  background: url("../img/angelo-moleele-725340-unsplash.jpg");
+  background-position: 0 -280px;
+  background-attachment: fixed;
+  color: #fff;
+  border-bottom: 1px #eee solid;
+  padding-top: 50px;
+  background-size: cover;
+}
+
+.card-footer {
+  background-color: white;
+}
