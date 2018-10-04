@@ -51,50 +51,52 @@
   </header>
 
   <!-- CONTACT SECTION -->
-  <section id="contact" class="py-3">
-    <div class="container">
-      <div class="row">
-        <div class="col-md-9 mx-auto">
-          <div class="card p-4">
-            <div class="card-body">
-              <h3 class="text-center lato-font">Please Fill Out This Form To Contact Us</h3>
-              <hr>
-              <div class="row">
-                <div class="col-md-6">
-                  <div class="form-group">
-                    <input type="text" class="form-control" placeholder="First Name">
+  <form action="contact_form_process.php" method="POST">
+    <section id="contact" class="py-3">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-9 mx-auto">
+            <div class="card p-4">
+              <div class="card-body">
+                <h3 class="text-center lato-font">Please Fill Out This Form To Contact Us</h3>
+                <hr>
+                <div class="row">
+                  <div class="col-md-6">
+                    <div class="form-group">
+                      <input id="first_name" type="text" class="form-control" placeholder="First Name">
+                    </div>
                   </div>
-                </div>
-                <div class="col-md-6">
-                  <div class="form-group">
-                    <input type="text" class="form-control" placeholder="Last Name">
+                  <div class="col-md-6">
+                    <div class="form-group">
+                      <input id="last_name" type="text" class="form-control" placeholder="Last Name">
+                    </div>
                   </div>
-                </div>
-                <div class="col-md-6">
-                  <div class="form-group">
-                    <input type="text" class="form-control" placeholder="Email">
+                  <div class="col-md-6">
+                    <div class="form-group">
+                      <input id="email" type="text" class="form-control" placeholder="Email">
+                    </div>
                   </div>
-                </div>
-                <div class="col-md-6">
-                  <div class="form-group">
-                    <input type="text" class="form-control" placeholder="Phone Number">
+                  <div class="col-md-6">
+                    <div class="form-group">
+                      <input id="phone_num" type="text" class="form-control" placeholder="Phone Number">
+                    </div>
                   </div>
-                </div>
-                <div class="col-md-12">
-                  <div class="form-group">
-                    <textarea class="form-control" name="" id="" rows="10" placeholder="Message"></textarea>
+                  <div class="col-md-12">
+                    <div class="form-group">
+                      <textarea class="form-control" name="" id="message" rows="10" placeholder="Message"></textarea>
+                    </div>
                   </div>
                 </div>
               </div>
-            </div>
-            <div class="card-footer">
-              <button class="btn btn-outline-success btn-block">Send</button>
+              <div class="card-footer">
+                <button type="submit" name="submit" class="btn btn-outline-success btn-block">Send</button>
+              </div>
             </div>
           </div>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
+  </form>
 
 
   <!-- FOOTER -->
@@ -119,11 +121,6 @@
     // Gets the current year
     $('#year').text(new Date().getFullYear());
 
-    // Configure Slider
-    $('.carousel').carousel({
-      interval: 4000,
-      pause: 'hover'
-    });
   </script>
 </body>
 
