@@ -63,33 +63,29 @@
                 <div class="row">
                   <div class="col-md-6">
                     <div class="form-group">
-                      <input id="first_name" type="text" class="form-control" placeholder="First Name">
+                      <input id="first_name" name="first_name" type="text" class="form-control" placeholder="First Name">
                     </div>
                   </div>
                   <div class="col-md-6">
                     <div class="form-group">
-                      <input id="last_name" type="text" class="form-control" placeholder="Last Name">
-                    </div>
-                  </div>
-                  <div class="col-md-6">
-                    <div class="form-group">
-                      <input id="email" type="text" class="form-control" placeholder="Email">
-                    </div>
-                  </div>
-                  <div class="col-md-6">
-                    <div class="form-group">
-                      <input id="phone_num" type="text" class="form-control" placeholder="Phone Number">
+                      <input id="last_name" name="last_name" type="text" class="form-control" placeholder="Last Name">
                     </div>
                   </div>
                   <div class="col-md-12">
                     <div class="form-group">
-                      <textarea class="form-control" name="" id="message" rows="10" placeholder="Message"></textarea>
+                      <input id="email" name="email" type="email" class="form-control" placeholder="Email">
+                    </div>
+                  </div>
+                  <div class="col-md-12">
+                    <div class="form-group">
+                      <textarea class="form-control" name="message" id="message" rows="10" placeholder="Message"></textarea>
                     </div>
                   </div>
                 </div>
               </div>
               <div class="card-footer">
-                <button type="submit" name="submit" class="btn btn-outline-success btn-block">Send</button>
+                <input type="submit" name="submit" class="btn btn-outline-success btn-block" value="Submit">
+                <!-- <button type="submit" name="submit" class="btn btn-outline-success btn-block">Send</button> -->
               </div>
             </div>
           </div>
