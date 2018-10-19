@@ -11,7 +11,7 @@
     crossorigin="anonymous">
   <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
   <link rel="stylesheet" href="css/styles.css">
-  <title>Sacramento Bike Repair</title>
+  <title>Sac Bike Repair - Contact</title>
 </head>
 
 <body>
@@ -51,7 +51,7 @@
   </header>
 
   <!-- CONTACT SECTION -->
-  <form action="contact_form_process.php" method="POST">
+  <form action="php/contact_form_process.php" method="POST">
     <section id="contact" class="py-3">
       <div class="container">
         <div class="row">
@@ -63,29 +63,28 @@
                 <div class="row">
                   <div class="col-md-6">
                     <div class="form-group">
-                      <input id="first_name" name="first_name" type="text" class="form-control" placeholder="First Name">
+                      <input id="first_name" name="first_name" type="text" class="form-control" placeholder="First Name" required>
                     </div>
                   </div>
                   <div class="col-md-6">
                     <div class="form-group">
-                      <input id="last_name" name="last_name" type="text" class="form-control" placeholder="Last Name">
+                      <input id="last_name" name="last_name" type="text" class="form-control" placeholder="Last Name" required>
                     </div>
                   </div>
                   <div class="col-md-12">
                     <div class="form-group">
-                      <input id="email" name="email" type="email" class="form-control" placeholder="Email">
+                      <input id="email" name="email" type="email" class="form-control" placeholder="Email" required>
                     </div>
                   </div>
                   <div class="col-md-12">
                     <div class="form-group">
-                      <textarea class="form-control" name="message" id="message" rows="10" placeholder="Message"></textarea>
+                      <textarea class="form-control" name="message" id="message" rows="10" placeholder="Message" required></textarea>
                     </div>
                   </div>
                 </div>
               </div>
               <div class="card-footer">
                 <input type="submit" name="submit" class="btn btn-outline-success btn-block" value="Submit">
-                <!-- <button type="submit" name="submit" class="btn btn-outline-success btn-block">Send</button> -->
               </div>
             </div>
           </div>

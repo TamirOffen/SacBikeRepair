@@ -11,7 +11,7 @@
     crossorigin="anonymous">
   <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
   <link rel="stylesheet" href="css/styles.css">
-  <title>Sacramento Bike Repair</title>
+  <title>Sac Bike Repair - Services</title>
 </head>
 
 <body>
@@ -58,6 +58,7 @@
     <div class="container">
       <div class="row">
 
+
         <div class="col-md-4">
           <div class="card text-center">
             <div class="card-header bg-dark text-white p-0 pt-1">
@@ -89,13 +90,15 @@
             </div>
 
             <div class="card-footer">
-              <button class="btn btn-success btn-block" data-toggle="modal" data-target="#flatTireModal">
+              <button type="button" class="btn btn-success btn-block" data-toggle="modal" data-target="#flatTireModal">
                 Get It
               </button>
             </div>
 
           </div>
+
         </div>
+
 
         <div class=" col-md-4 ">
           <div class="card text-center ">
@@ -192,66 +195,69 @@
   </section>
 
   <!-- FLAT TIRE MODAL -->
-  <div id="flatTireModal" class="modal fade text-dark">
-    <div class="modal-dialog">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h4 class="modal-title">Flat Tire Service</h4>
-          <button class="close" data-dismiss="modal"><span>&times;</span></button>
-        </div>
-        <div class="modal-body">
-          <form>
-            <div class="form-group">
-              <label for="name" class="d-inline">Name:</label>
-              <input type="text" class="form-control d-inline" placeholder="Jonah Harry">
+  <form action="php/flat_service_process.php" method="POST">
+    <div id="flatTireModal" class="modal fade text-dark">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h4 class="modal-title">Flat Tire Service</h4>
+            <button class="close" data-dismiss="modal"><span>&times;</span></button>
+          </div>
+          <div class="modal-body">
+            <form>
+              <div class="form-group">
+                <label for="name" class="d-inline">Name:</label>
+                <input name="name" type="text" class="form-control d-inline" placeholder="Jonah Harry" required>
+              </div>
+              <div class="form-group">
+                <label for="email">Email:</label>
+                <input name="email" type="email" class="form-control" placeholder="example123@gmail.com" required>
+              </div>
+              <div class="form-group">
+                <label for="number">Phone Number:</label>
+                <input name="phone_number" type="tel" class="form-control" placeholder="123 456-7899" required>
+              </div>
+              <div class="form-group">
+                <label for="bike_type">What type of bike do you have?</label>
+                <select name="bike_type" required>
+                  <option value="Other">Other</option>
+                  <option value="Road">Road</option>
+                  <option value="Mountain">Mountain</option>
+                  <option value="Hybrid">Hybrid</option>
+                  <option value="Kids">Kids</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label for="flat_tire_service_type">Flat Tire Service needed?</label>
+                <select name="flat_tire_service_type" required>
+                  <option value="not-sure">Not Sure</option>
+                  <option value="Inner-Tube">Inner-Tube (20$)</option>
+                  <option value="Inner-Tube & Tire">Inner-Tube & Tire (35$)</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label for="avail_days" class="mb-0">Days Available:</label>
+                <p class="p-0 m-0"></p>
+                <input type="checkbox" name="sunday" value=""> <div class="mr-3 d-inline">Sunday</div>
+                <input type="checkbox" name="tuesday" value="" class=""> Tuesday (after 5pm) <br>
+                <input type="checkbox" name="thursday" value="" class=""> <div class="mr-3 d-inline">Thursday (after 5pm)</div>
+                <input type="checkbox" name="saturday" value="" class=""> Saturday <br>
+                <input type="checkbox" name="none_of_these" value="" class=""> None of these <br>
+              </div>
+              <div class="form-group">
+                <label for="notes">Notes?</label>
+                <textarea name="notes" class="form-control"></textarea>
+              </div>
+            </form>
+            <div class="modal-footer">
+              <button type="submit" name="submit" class="btn btn-primary btn-block btn-lg"><i class="fas fa-share-square"></i>
+                Submit</button>
             </div>
-            <div class="form-group">
-              <label for="email">Email:</label>
-              <input type="email" class="form-control" placeholder="example123@gmail.com">
-            </div>
-            <div class="form-group">
-              <label for="number">Phone Number:</label>
-              <input type="tel" class="form-control" placeholder="123 456-7899">
-            </div>
-            <div class="form-group">
-              <label for="bike_type">What type of bike do you have?</label>
-              <select name="bike_type">
-                <option value="other">Other</option>
-                <option value="road">Road</option>
-                <option value="mountain">Mountain</option>
-                <option value="hybrid">Hybrid</option>
-                <option value="kids">Kids</option>
-              </select>
-            </div>
-            <div class="form-group">
-              <label for="flat_tire_service_type">Flat Tire Service needed?</label>
-              <select name="flat_tire_service_type">
-                <option value="not-sure">Not Sure</option>
-                <option value="inner-tube">Inner-Tube (20$)</option>
-                <option value="inner-tube_and_tire">Inner-Tube & Tire (35$)</option>
-              </select>
-            </div>
-            <div class="form-group">
-              <label for="avail_days" class="mb-0">Days Available:</label>
-              <p class="p-0 m-0"></p>
-              <input type="checkbox" name="" value=""> <div class="mr-3 d-inline">Sunday</div>
-              <input type="checkbox" name="" value="" class=""> Tuesday (after 5pm) <br>
-              <input type="checkbox" name="" value="" class=""> <div class="mr-3 d-inline">Thursday (after 5pm)</div>
-              <input type="checkbox" name="" value="" class=""> Saturday <br>
-              <input type="checkbox" name="" value="" class=""> None of these <br>
-            </div>
-            <div class="form-group">
-              <label for="notes">Notes?</label>
-              <textarea class="form-control"></textarea>
-            </div>
-          </form>
-          <div class="modal-footer">
-            <button class="btn btn-primary btn-block btn-lg"><i class="fas fa-share-square"></i> Submit</button>
           </div>
         </div>
       </div>
     </div>
-  </div>
+  </form>
 
   <!-- BASIC SERVICE MODAL -->
   <div id="basicService" class="modal fade text-dark">
@@ -332,11 +338,11 @@
             <div class="form-group">
               <label for="bike_type">What type of bike do you have?</label>
               <select name="bike_type">
-                <option value="other">Other</option>
-                <option value="road">Road</option>
-                <option value="mountain">Mountain</option>
-                <option value="hybrid">Hybrid</option>
-                <option value="kids">Kids</option>
+                <option value="Other">Other</option>
+                <option value="Road">Road</option>
+                <option value="Mountain">Mountain</option>
+                <option value="Hybrid">Hybrid</option>
+                <option value="Kids">Kids</option>
               </select>
             </div>
             <div class="form-group">
@@ -350,7 +356,7 @@
             </div>
             <div class="form-group">
               <label for="notes">Notes?</label>
-              <textarea class="form-control"></textarea>
+              <textarea name="notes" class="form-control"></textarea>
             </div>
           </form>
           <div class="modal-footer">

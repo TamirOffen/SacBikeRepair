@@ -27,11 +27,11 @@ if(isset($_POST['submit'])) {
 
   $mailTo = "tamiroffen@sacbikerepair.com";
   $headers = "From: " . $mailFrom;
-  $txt = "You have recieved an email from " . $name . ".\n\n" .  $message;
+  $txt = "Name: " . $name . "\nEmail: " . $mailFrom . "\n\n" .  $message;
 
   mail($mailTo, $subject, $txt, $headers);
 
-  header("Location: index.html?mailsend");
+  header("Location: ../index.html?mailsend");
 }
 
 ?>
