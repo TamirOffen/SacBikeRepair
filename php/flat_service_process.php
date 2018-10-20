@@ -30,11 +30,36 @@ if(isset($_POST['submit'])) {
   $bike_type = $_POST['bike_type'];
   $service_needed = $_POST['flat_tire_service_type'];
   $notes = $_POST['notes'];
+  $days = "";
+
+  if($_POST['sunday'] == 'Sunday') {
+    $days = $days . " Sunday ";
+  }
+  if($_POST['tuesday'] == 'Tuesday') {
+    $days = $days . " Tuesday ";
+  }
+  if($_POST['thursday'] == 'Thursday') {
+    $days = $days . " Thursday ";
+  }
+  if($_POST['saturday'] == 'Saturday') {
+    $days = $days . " Saturday ";
+  }
+  if($_POST['none_of_these'] == 'None') {
+    $days = $days . " None ";
+  }
+
+  if($notes == "") {
+    $notes = "'NONE'";
+  }
+  if($days == "") {
+    $days = "'DAY NOT SELECTED!'";
+  }
 
   $mailTo = "tamiroffen@sacbikerepair.com";
   $headers = "From: " . $mailFrom;
   $txt = "Name: " . $name . "\nEmail: " . $mailFrom . "\nPhone Number: " . $phone_number
-          . "\n\nBike Type: " . $bike_type . "\nService Needed:" . $service_needed;
+          . "\n\nBike Type: " . $bike_type . "\nService Needed:" . $service_needed
+          . "\nDays Available: " . $days . "\n\nNotes: " . $notes;
 
   mail($mailTo, $subject, $txt, $headers);
 
